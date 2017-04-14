@@ -24,16 +24,22 @@ function onReady(){
 function highlightASquare(){
   //This variable stores an array of the elements with the 'square' class
   var arrayOfSquares = $('.square');
-  arrayOfSquares.eq(count).addClass('highlight');
-  arrayOfSquares.eq(count-1).removeClass('highlight');
-  count++;
+  // arrayOfSquares.eq(count).addClass('highlight');
+  // arrayOfSquares.eq(count-1).removeClass('highlight');
+  // count++;
 
-if (count < numberOfSquares) {
-  
+  if (count < numberOfSquares) {
+    arrayOfSquares.eq(count).addClass('highlight');
+    arrayOfSquares.eq(count-1).removeClass('highlight');
+    count++;
+  } else {
+    arrayOfSquares.eq(count).addClass('highlight');
+    arrayOfSquares.eq(count-1).removeClass('highlight');
+    count=0;
+  }
+
+
 }
-
-}
-
 
 //You don't need to change this function:
 function appendSquaresToDom(number){
