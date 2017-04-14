@@ -14,7 +14,7 @@ $(document).ready(onReady);
 //Function that runs when html is fully loaded:
 function onReady(){
   //click listener to button:
-  $('.change-highlight').on('click', highlightASquare)
+  $('.change-highlight').on('click', highlightASquare);
 
   //call to put starting squares on DOM
   appendSquaresToDom(numberOfSquares);
@@ -23,7 +23,7 @@ function onReady(){
 function highlightASquare(){
   //This variable stores an array of the elements with the 'square' class
   var arrayOfSquares = $('.square');
-
+  arrayOfSquares.addClass('highlight');
 }
 
 
