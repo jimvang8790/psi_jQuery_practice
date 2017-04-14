@@ -8,6 +8,7 @@
   you are also welcome to write more than the given functions.
 */
 var numberOfSquares = 10;
+// setting a counter for the if/else statement
 var count = 0;
 
 $(document).ready(onReady);
@@ -24,9 +25,6 @@ function onReady(){
 function highlightASquare(){
   //This variable stores an array of the elements with the 'square' class
   var arrayOfSquares = $('.square');
-  // arrayOfSquares.eq(count).addClass('highlight');
-  // arrayOfSquares.eq(count-1).removeClass('highlight');
-  // count++;
 
   if (count < numberOfSquares) {
     arrayOfSquares.eq(count).addClass('highlight');
@@ -35,6 +33,7 @@ function highlightASquare(){
   } else {
     arrayOfSquares.eq(count).addClass('highlight');
     arrayOfSquares.eq(count-1).removeClass('highlight');
+    // reseting this back to the beginning
     count=0;
   }
 
