@@ -8,6 +8,7 @@
   you are also welcome to write more than the given functions.
 */
 var numberOfSquares = 10;
+var count = 0;
 
 $(document).ready(onReady);
 
@@ -23,11 +24,14 @@ function onReady(){
 function highlightASquare(){
   //This variable stores an array of the elements with the 'square' class
   var arrayOfSquares = $('.square');
-  arrayOfSquares.addClass('highlight');
+  arrayOfSquares.eq(count).addClass('highlight');
+  arrayOfSquares.eq(count-1).removeClass('highlight');
+  count++;
 
-  // if (numberOfSquares < 10) {
-  //   arrayOfSquares.addClass('highlight');
-  // }
+if (count < numberOfSquares) {
+  
+}
+
 }
 
 
