@@ -24,6 +24,10 @@ function highlightASquare(){
   //This variable stores an array of the elements with the 'square' class
   var arrayOfSquares = $('.square');
   arrayOfSquares.addClass('highlight');
+
+  // if (numberOfSquares < 10) {
+  //   arrayOfSquares.addClass('highlight');
+  // }
 }
 
 
